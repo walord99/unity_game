@@ -16,7 +16,7 @@ public class attackScript : MonoBehaviour
             Collider2D[] hitList = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
             for (int i = 0; i < hitList.Length; i++)
             {
-                hitList[i].GetComponent<test>().TakeDamage(attackDamage, attackPos.position, knockbackStrenght);
+                hitList[i].GetComponent<Enemy>().TakeDamage(attackDamage, attackPos.position, knockbackStrenght);
             }
         }
     }

@@ -26,11 +26,13 @@ public class PlayerMovement : MonoBehaviour
    {
         Movement();
 
+        if (IsGrounded())
+        {
+            jumpCount = maxJumpCount;
+        }
+
         if (Input.GetButtonDown("Jump")){
-            if (IsGrounded())
-            {
-                jumpCount = maxJumpCount;
-            }
+
 
             if (jumpCount > 0)
             {

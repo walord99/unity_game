@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     Rigidbody2D enemyRB;
-    // Start is called before the first frame update
     void Start()
     {
         enemyRB = GetComponent<Rigidbody2D>();
@@ -17,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int dmg, Vector2 dmgOrigin, float knockbackStrenght)
+    public void TakeDamage(int dmg, Vector2 dmgOrigin, float knockbackStrenght = 0)
     {
         Debug.Log("Damage Taken: " + dmg);
         Vector2 knockbackDirection = enemyRB.position - dmgOrigin;
